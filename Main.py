@@ -13,7 +13,23 @@ class MainWindow(QMainWindow):
         self.browser.setUrl(QUrl('http://google.com'))
         self.setCentralWidget(self.browser)
         self.showMaximized()
+        ##############
+        # Bookmark_bar
+        Bookmark_bar = QToolBar()
+        self.addToolBar(Bookmark_bar)
 
+        Youtube_btn = QAction('Youtube', self)
+        Youtube_btn.triggered.connect(self.goYoutube)
+        Bookmark_bar.addAction(Youtube_btn)
+
+        Facebook_btn = QAction('Facebook', self)
+        Facebook_btn.triggered.connect(self.goFacebook)
+        Bookmark_bar.addAction(Facebook_btn)
+
+        Google_btn = QAction('Google', self)
+        Google_btn.triggered.connect(self.goGoogle)
+        Bookmark_bar.addAction(Google_btn)
+        ##############
         # navbar
         navbar = QToolBar()
         self.addToolBar(navbar)
@@ -38,6 +54,15 @@ class MainWindow(QMainWindow):
 
     def update_url(self, q):
         self.url_bar.setText(q.toString())
+
+    def goYoutube(self):
+        self.browser.setUrl(QUrl('https://www.youtube.com'))
+
+    def goFacebook(self):
+        self.browser.setUrl(QUrl('https://www.facebook.com'))
+
+    def goGoogle(self):
+        self.browser.setUrl(QUrl('https://www.google.fr'))
 
 
 app = QApplication(sys.argv)
