@@ -75,3 +75,5 @@ icon.addPixmap(QtGui.QPixmap("logo.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
 window.setWindowIcon(icon)
 
 app.exec_()
+#command to convert from py code to executable: auto-py-to-exe
+#i use nsis to make the installer of this application
