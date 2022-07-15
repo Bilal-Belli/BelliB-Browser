@@ -81,4 +81,4 @@ app.exec_()
 #1-make the directory of executable
 #2-install 'inno setup'
 #3-use inno setup to create the executable of the installer, dont miss to add icons,folders, and any file
-#4-dont forget to save the 
+#4-dont forget to save the files with defferent nams
