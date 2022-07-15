@@ -32,9 +32,6 @@ class MainWindow(QMainWindow):
 
         self.browser.urlChanged.connect(self.update_url)
         
-    def navigate_home(self):
-        self.browser.setUrl(QUrl('http://programming-hero.com'))
-
     def navigate_to_url(self):
         url = self.url_bar.text()
         self.browser.setUrl(QUrl(url))
@@ -45,9 +42,6 @@ class MainWindow(QMainWindow):
 
 app = QApplication(sys.argv)
 QApplication.setApplicationName('BelliB Browser')
-
-#QApplication.iconbitmap('logo.ico')
-
 
 window = MainWindow()
 
