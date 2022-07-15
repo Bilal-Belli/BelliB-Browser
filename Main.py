@@ -77,3 +77,8 @@ window.setWindowIcon(icon)
 app.exec_()
 #command to convert from py code to executable: auto-py-to-exe
 #i use nsis to make the installer of this application
+#steps to make installer
+#1-make the directory of executable
+#2-install 'inno setup'
+#3-use inno setup to create the executable of the installer, dont miss to add icons,folders, and any file
+#4-dont forget to save the 
